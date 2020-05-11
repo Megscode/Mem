@@ -12,6 +12,6 @@
     "karma-jasmine": "^3.1.1"
   },
   "scripts": {
-    "test": "SpecRunner.html"
+    "test": "./test/PlayerSpec.js"
   }
 }
