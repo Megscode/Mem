@@ -10,7 +10,7 @@
     "karma-jasmine": "^3.1.1"
   },
   "scripts": {
-    "test": "jshint hello.js"
+    "test": "jasmine-node spec/*.js"
   },
   "main": "hello.js",
   "directories": {
