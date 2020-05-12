@@ -25,4 +25,5 @@ $ npm install -g karma-cli
 
 Then you can run future tests with:
 
-$ karma start 
+$ karma start --single-run
+
