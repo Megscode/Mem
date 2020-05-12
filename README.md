@@ -17,6 +17,8 @@ Ensure latest versions of node.js and npm installed.
 
 To run tests: 
 
+$ npm install karma-firefox-launcher --save-dev
+
 $ node_modules/karma/bin/karma start karma.conf.js --single-run
 
 Run in oneline:
