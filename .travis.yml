@@ -8,5 +8,4 @@ before_install:
 before_script:
     - npm install
 script: 
-    - npm install
     - node_modules/karma/bin/karma start karma.conf.js --single-run
