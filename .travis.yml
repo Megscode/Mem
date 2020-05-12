@@ -2,7 +2,7 @@ language: node_js
 node_js:
     - "0.10"
 services:
-  - xvfb
+    - xvfb
 before_install:
     - export CHROME_BIN=chromium-browser
 before_script:
