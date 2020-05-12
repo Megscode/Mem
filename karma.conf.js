@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Mon May 11 2020 22:12:35 GMT+0100 (British Summer Time)
+// Generated on Mon May 11 2020 22:30:38 GMT+0100 (British Summer Time)
 
 module.exports = function(config) {
   config.set({
@@ -15,8 +15,8 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'src/*.js',
-      'spec/*.js'
+      'lib/*.js',
+      'test/*.js'
     ],
 
 
@@ -51,13 +51,22 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
+    autoWatch: true,
 
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Firefox'],
+    // Config values to allow TravisCI to run chrome in it's container
+    browsers: ['Chrome', 'ChromeCanary'],
+    customLaunchers: {
+    // tell TravisCI to use chromium when testing
+      Chrome_travis_ci: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    },
 
+    // Detect if this is TravisCI running the tests and tell it to use chromium
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
@@ -66,5 +75,10 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  })
+  });
+
+  // Detect if this is TravisCI running the tests and tell it to use chromium
+  if(process.env.TRAVIS){
+    config.browsers = ['Chrome_travis_ci'];
+  }
 }

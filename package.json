@@ -17,7 +17,9 @@
   "directories": {
     "lib": "lib"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jasmine": "^3.5.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Megscode/Mem.git"
