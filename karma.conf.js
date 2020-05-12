@@ -57,14 +57,7 @@ module.exports = function(config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     // Config values to allow TravisCI to run chrome in it's container
-    browsers: ['Chrome', 'ChromeCanary'],
-    customLaunchers: {
-    // tell TravisCI to use chromium when testing
-      Chrome_travis_ci: {
-        base: 'Chrome',
-        flags: ['--no-sandbox']
-      }
-    },
+    browsers: ['Firefox'],
 
     // Detect if this is TravisCI running the tests and tell it to use chromium
 
@@ -78,7 +71,4 @@ module.exports = function(config) {
   });
 
   // Detect if this is TravisCI running the tests and tell it to use chromium
-  if(process.env.TRAVIS){
-    config.browsers = ['Chrome_travis_ci'];
-  }
 }
