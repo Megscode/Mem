@@ -7,11 +7,21 @@
 
 <button type="button" onclick="myFunction()">Up</button>
 
-<p id="demo">1</p>
+<p id="moodValue">1</p>
 
 <script>
   function myFunction() { 
-    document.getElementById("demo").innerHTML = "2";
+    document.getElementById("moodValue").innerHTML = "2";
+  }
+</script>
+
+<button type="button" onclick="myFunctionDown()">Down</button>
+
+<p id="moodValueDown">6</p>
+
+<script>
+  function myFunctionDown() { 
+    document.getElementById("moodValueDown").innerHTML = "5";
   }
 </script>
 
