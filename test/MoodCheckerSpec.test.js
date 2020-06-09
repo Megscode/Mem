@@ -6,7 +6,7 @@ describe("MoodChecker", function() {
   });
 
   it("should exist", function() {
-    expect(mood.init).toEqual(1);
+    expect(mood.moodValue).toEqual(1);
   });
 
 });
