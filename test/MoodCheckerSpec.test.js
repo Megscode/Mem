@@ -17,17 +17,11 @@ describe("MoodChecker", function() {
 
   it("maximum mood value is 10", function() {
     expect(mood.moodValue).toEqual(1)
-    mood.increaseMood()
-    mood.increaseMood()
-    mood.increaseMood()
-    mood.increaseMood()
-    mood.increaseMood()
-    mood.increaseMood()
-    mood.increaseMood()
-    mood.increaseMood()
-    mood.increaseMood()
-    mood.increaseMood()
-    mood.increaseMood()
+    let i = 0;
+    do {
+      mood.increaseMood();
+      i = i + 1;
+    } while (i < 10);
     expect(mood.moodValue).toEqual(10);
   });
 
