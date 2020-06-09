@@ -26,11 +26,11 @@ console.log(mood.moodValue)
 
 <button type="button" onclick="myFunctionDown()">Down</button>
 
-<p id="moodValueDown">6</p>
 
 <script>
   function myFunctionDown() { 
-    document.getElementById("moodValueDown").innerHTML = "5";
+    mood.decreaseMood()
+    document.getElementById("moodValue").innerHTML = mood.moodValue;
   }
 </script>
 
