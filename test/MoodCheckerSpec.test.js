@@ -25,4 +25,11 @@ describe("MoodChecker", function() {
     expect(mood.moodValue).toEqual(10);
   });
 
+
+  it("can decrease mood", function() {
+    expect(mood.moodValue).toEqual(1)
+    mood.decreaseMood()
+    expect(mood.moodValue).toEqual(1);
+  });
+  
 });
