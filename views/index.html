@@ -19,7 +19,8 @@ console.log(mood.moodValue)
 
 <script>
   function myFunction() { 
-    document.getElementById("moodValue").innerHTML = "2";
+    mood.increaseMood()
+    document.getElementById("moodValue").innerHTML = mood.moodValue;
   }
 </script>
 
