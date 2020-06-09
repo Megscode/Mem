@@ -26,10 +26,19 @@ describe("MoodChecker", function() {
   });
 
 
-  it("can decrease mood", function() {
-    expect(mood.moodValue).toEqual(1)
+  it("minimum mood is 1", function() {
     mood.decreaseMood()
     expect(mood.moodValue).toEqual(1);
   });
-  
+
+  it("can decrease mood value", function() {
+    let i = 0;
+    do {
+      mood.increaseMood();
+      i = i + 1;
+    } while (i < 7);
+    mood.decreaseMood()
+    expect(mood.moodValue).toEqual(7);
+  });
+
 });
