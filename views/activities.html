@@ -7,14 +7,19 @@
 <body>
 <h1>this is an activity</h1>
 
-<button type="button" onclick="myFunction()">Load mood value</button>
-
 <p id="moodValue">test</p>
+
+<!-- <button type="button" onclick="myFunction()">Load mood value</button> -->
+<script>
+document.getElementById("moodValue").innerHTML = sessionStorage.getItem("moodValue");
+</script>
+
+
 
 <script>
   function myFunction() { 
     document.getElementById("moodValue").innerHTML = mood.moodValue;
   }
-</script>
+</script> 
 
 
