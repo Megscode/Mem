@@ -10,7 +10,6 @@
 
 <script>
   mood = new Mood();
-
 </script>
 
 <button type="button" onclick="myFunction()">Up</button>
@@ -38,14 +37,8 @@
 <script>
   
 function submitMood() {
-  console.log(sessionStorage.setItem("moodValue", mood.moodValue));
-  // Retrieve
-  // document.getElementById("result").innerHTML = sessionStorage.getItem();
-
-  // Change the Mem part
-  // submittedMood = mood.moodValue
-  // sumbitMoodClassInstance = new submitMood(submittedMood)
-  location.replace("/views/activities.html")
+  sessionStorage.setItem("moodValue", mood.moodValue);
+  location.replace("/Mem/views/activities.html")
 }
 </script>
 </body>
