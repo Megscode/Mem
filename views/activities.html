@@ -18,11 +18,17 @@
 <script>
 currentMood = sessionStorage.getItem("moodValue");  
 document.getElementById("moodValue").innerHTML = currentMood;
-var item = activity.mood4[Math.floor(Math.random() * activity.mood4.length)];
+
+
+
+// Not used right now
   if (currentMood == 4) {
-suggestedActivity = item 
+     moodArray = activity.mood4 
   }
-document.getElementById("activity").innerHTML = suggestedActivity;
+  // Random function
+var item = moodArray[Math.floor(Math.random() * moodArray.length)];
+  // Replace text
+document.getElementById("activity").innerHTML = item;
 </script>
 
  <!-- if moodvalue == 4 then 'this array'.rand  -->
