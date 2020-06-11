@@ -3,13 +3,21 @@
 <html>
 <head>
   <script type="text/javascript" src="../lib/MoodChecker.js"></script>
+  <script type="text/javascript" src="../lib/Activity.js"></script>
 </head>
 <body>
 <h1>this is an activity</h1>
 
+<script>
+  activity = new Activity();
+</script>
+
 <p id="moodValue">test</p>
+<p id="activity">this is a test activity</p>
 
 <script>
 document.getElementById("moodValue").innerHTML = sessionStorage.getItem("moodValue");
+document.getElementById("activity").innerHTML = activity.mood4[1]
 </script>
 
+ <!-- if moodvalue == 4 then 'this array'.rand  -->
