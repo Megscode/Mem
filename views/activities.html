@@ -22,10 +22,26 @@ document.getElementById("moodValue").innerHTML = currentMood;
 
 
 // Not used right now
-  if (currentMood == 4) {
-     moodArray = activity.mood4
-  } else (currentMood == 1); {
-    moodArray = activity.mood1
+  if (currentMood == 1) {
+     moodArray = activity.mood1;
+  } else if (currentMood == 2) {
+    moodArray = activity.mood2;
+  } else if (currentMood == 3) {
+    moodArray = activity.mood3;
+  } else if (currentMood == 4) {
+    moodArray = activity.mood4;
+  } else if (currentMood == 5) {
+    moodArray = activity.mood5
+  } else if (currentMood == 6) {
+    moodArray = activity.mood6
+  } else if (currentMood == 7) {
+    moodArray = activity.mood7
+  } else if (currentMood == 8) {
+    moodArray = activity.mood8
+  } else if (currentMood == 9) {
+    moodArray = activity.mood9
+  } else (currentMood == 10); {
+    moodArray = activity.mood10
   }
   // Random function
 var item = moodArray[Math.floor(Math.random() * moodArray.length)];
