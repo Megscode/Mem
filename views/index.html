@@ -10,6 +10,7 @@
   
 </head>
 <body>
+  <div class="text-center">
 <h1>Mood Checker</h1>
 
 <h4>How are you feeling?</h4>
@@ -40,8 +41,9 @@
 </script>
 
 <button onclick=submitMood()>Submit</button>
+</div>
 <script>
-  
+
 function submitMood() {
   sessionStorage.setItem("moodValue", mood.moodValue);
   location.replace("/Mem/views/activities.html")
